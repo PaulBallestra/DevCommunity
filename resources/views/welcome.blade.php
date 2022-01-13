@@ -9,12 +9,16 @@
         <!-- TAILWIND LINK -->
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
+        @livewireStyles
     </head>
     <body class="antialiased">
+
+        @livewire('post')
 
         <h1 class="text-3xl font-bold underline">
             Hello world!
         </h1>
 
+        @livewireScripts
     </body>
 </html>
