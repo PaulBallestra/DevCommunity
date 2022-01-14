@@ -3,11 +3,10 @@
 namespace App\Http\Livewire;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Livewire\Component;
 
-use App\Models\User;
-use App\Models\Post;
 
 class CreatePost extends Component
 {

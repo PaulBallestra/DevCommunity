@@ -8,6 +8,6 @@
     @livewire('create-post')
 
     <!-- AUTRES POST AFFICHÉS -->
-
+    @livewire('posts')
 
 </x-app-layout>

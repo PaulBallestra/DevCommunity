@@ -17,7 +17,7 @@ class PostController extends Controller
         ]);
 
         //Vérif du contenu pas vide
-        DB::insert('INSERT INTO posts (content, user_id, image) values ($request->content, auth()->user()->id, null)');
+        DB::insert('INSERT INTO posts (content, user_id, user_name, image) values ($request->content, Auth::user()->id, Auth::user()->name, null)');
     }
 
 }

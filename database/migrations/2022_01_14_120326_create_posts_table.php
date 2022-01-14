@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Schema;
 
 class CreatePostsTable extends Migration
@@ -15,6 +16,8 @@ class CreatePostsTable extends Migration
             $table->string('content'); //contenu
             $table->integer('likes')->nullable(); //nbLikes
             $table->string('image')->nullable(); //url de l'image
+
+            $table->string('user_name');
 
             //ForeignKey sur l'id de User
             $table->foreignId('user_id')
