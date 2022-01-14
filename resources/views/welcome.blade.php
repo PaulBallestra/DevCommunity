@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Dev Community - Sign Up</title>
+    <title>Dev Community</title>
 
     <!-- TAILWIND LINK -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
