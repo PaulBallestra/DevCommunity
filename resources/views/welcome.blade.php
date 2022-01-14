@@ -75,7 +75,7 @@
                     </svg>
                     <span>14</span>
                 </a>
-                <a href="#" class="block no-underline text-black flex px-4 py-2 items-center hover:bg-slate-200">
+                <a id="comment-button" class="block no-underline text-black flex px-4 py-2 items-center hover:bg-slate-200">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                          stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                          class="feather feather-message-circle h-6 w-6 mr-1">
@@ -88,7 +88,7 @@
     </div>
 
     <!-- COMMENT -->
-    <div class="bg-slate-200 p-4 pl-8 flex border-t border-slate-400">
+    <div class="hidden bg-slate-200 p-4 pl-8 flex border-t border-slate-400" id="comment-div">
         <div class="w-12 mr-2 flex-no-shrink">
             <img class="rounded-full" src="{{ asset('images/profil.jpg') }}">
         </div>
@@ -104,7 +104,8 @@
 
 </div>
 
-<!-- tailwindjs -->
 <script src="{{ asset('js/app.js') }}" defer></script>
+
+@livewireScripts
 </body>
 </html>
