@@ -2,12 +2,30 @@
 
 namespace App\Http\Livewire;
 
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Livewire\Component;
+
+use App\Models\User;
+use App\Models\Post;
 
 class CreatePost extends Component
 {
+    public $content;
+
+    //Fonction createPost avec livewire
+    public function createPost()
+    {
+        $this->validate(['content' => 'required']);
+        $post = auth()->user()->posts()->create(['content' => $this->content]);
+
+        $this->emit('postAdded', $post->id); //emit de l'event
+
+        $this->content = ""; //vidage du body
+    }
+
     public function render()
     {
-        return view('livewire.create-post');
+        return view('livewire.create-post', ['user' => auth()->user()]);
     }
 }

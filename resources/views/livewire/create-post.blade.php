@@ -5,8 +5,9 @@
         <div class="w-12 mr-2 flex-no-shrink">
             <img class="rounded-full" src="{{ asset('images/profil.jpg') }}">
         </div>
-        <div class="flex-grow bg-grey-lighter px-4 py-0 pl-8">
-            <textarea class="w-full border border-black rounded"></textarea>
+        <form method="POST" wire:submit.prevent="createPost" class="flex-grow bg-grey-lighter px-4 py-0 pl-8">
+            @csrf
+            <textarea id="content" wire:model="content" class="w-full border border-black rounded"></textarea>
             <div class="flex justify-end items-center mt-2">
                 <button class="p-2 text-black leading-none rounded border border-transparent hover:border-black mx-2">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -17,10 +18,10 @@
                         <polyline points="21 15 16 10 5 21"></polyline>
                     </svg>
                 </button>
-                <button class="py-2 px-4 bg-white text-black border border-black rounded rounded-full hover:bg-black hover:text-white">
+                <button type="submit" class="py-2 px-4 bg-white text-black border border-black rounded rounded-full hover:bg-black hover:text-white">
                     Post
                 </button>
             </div>
-        </div>
+        </form>
     </div>
 </div>
